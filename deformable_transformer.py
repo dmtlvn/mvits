@@ -172,6 +172,7 @@ class DeformableTransformer(nn.Module):
             if isinstance(text[0], str):
                 # Encode the text
                 tokenized = self.tokenizer.batch_encode_plus(text, padding="longest", return_tensors="pt").to(device)
+                print(tokenized)
                 encoded_text = self.text_encoder(**tokenized)
 
                 # Transpose memory because pytorch's attention expects sequence first
