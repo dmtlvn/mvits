@@ -13,7 +13,7 @@ from __future__ import division
 import torch
 from torch.autograd import gradcheck
 
-from models.ops.functions.ms_deform_attn_func import MSDeformAttnFunction, ms_deform_attn_core_pytorch
+from ops.functions.ms_deform_attn_func import MSDeformAttnFunction, ms_deform_attn_core_pytorch
 
 
 N, M, D = 1, 2, 2
