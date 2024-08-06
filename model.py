@@ -29,7 +29,7 @@ class Model:
             num_feature_levels=4,
         )
         state = torch.load(checkpoint, map_location="cpu")
-        model.load_state_dict(state)
+        model.load_state_dict(state["model"])
         self.model = ModulatedDetection(model)
 
     def get_model(self):
