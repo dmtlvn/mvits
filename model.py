@@ -1,9 +1,9 @@
 import torch
-from .backbone import Backbone, Joiner
-from .position_encoding import PositionEmbeddingSine
-from .deformable_transformer import DeformableTransformer
-from .mdef_detr import MDefDETR
-from .modulated_detection import ModulatedDetection
+from backbone import Backbone, Joiner
+from position_encoding import PositionEmbeddingSine
+from deformable_transformer import DeformableTransformer
+from mdef_detr import MDefDETR
+from modulated_detection import ModulatedDetection
 
 
 class Model:
