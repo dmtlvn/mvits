@@ -6,7 +6,7 @@ from torch import nn
 from torch.nn import functional as F
 from torchvision.models._utils import IntermediateLayerGetter
 
-from .model_util import NestedTensor, is_main_process
+from model_util import NestedTensor, is_main_process
 
 
 class FrozenBatchNorm2d(torch.nn.Module):

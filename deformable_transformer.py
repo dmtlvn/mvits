@@ -6,7 +6,7 @@ from torch import Tensor, nn
 from torch.nn.init import constant_, normal_, xavier_uniform_
 from transformers import RobertaModel, RobertaTokenizerFast
 
-from .deformable_modules import (
+from deformable_modules import (
     DeformableTransformerDecoder,
     DeformableTransformerDecoderLayer,
     DeformableTransformerEncoder,
@@ -14,7 +14,7 @@ from .deformable_modules import (
     _get_activation_fn,
     _get_clones,
 )
-from .ops.modules import MSDeformAttn
+from ops.modules import MSDeformAttn
 
 
 class DeformableTransformer(nn.Module):

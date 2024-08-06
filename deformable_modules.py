@@ -2,8 +2,8 @@ import copy
 import torch
 import torch.nn.functional as F
 from torch import nn
-from .model_util import inverse_sigmoid
-from .ops.modules import MSDeformAttn
+from model_util import inverse_sigmoid
+from ops.modules import MSDeformAttn
 
 
 class DeformableTransformerEncoderLayer(nn.Module):

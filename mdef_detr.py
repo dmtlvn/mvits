@@ -2,7 +2,7 @@ import torch
 import torch.distributed
 import torch.nn.functional as F
 from torch import nn
-from .model_util import NestedTensor, inverse_sigmoid
+from model_util import NestedTensor, inverse_sigmoid
 import copy
 
 
