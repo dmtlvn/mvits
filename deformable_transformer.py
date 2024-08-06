@@ -172,8 +172,10 @@ class DeformableTransformer(nn.Module):
             if isinstance(text[0], str):
                 # Encode the text
                 tokenized = self.tokenizer.batch_encode_plus(text, padding="longest", return_tensors="pt").to(device)
-                print(tokenized)
-                encoded_text = self.text_encoder(**tokenized)
+                # tokenized = {'input_ids': tensor([[   0, 1250, 8720,    2]], device='cuda:0'), 'attention_mask': tensor([[1, 1, 1, 1]], device='cuda:0')}
+                encoded_text = self.text_encoder(
+                    input_ids=tokenized["input_ids"], attention_mask=tokenized["attention_mask"]
+                )
 
                 # Transpose memory because pytorch's attention expects sequence first
                 text_memory = encoded_text.last_hidden_state.transpose(0, 1)
